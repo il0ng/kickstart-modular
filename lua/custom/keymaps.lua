@@ -1,6 +1,9 @@
 -- NOTE: Plugin specific keymaps can be found in their respective lua config files
 -- lua/custom/plugins/...
 
+-- enable hash key on mac
+vim.api.nvim_set_keymap('i', '<A-3>', '#', { noremap = true })
+
 -- centre half page jumps
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { noremap = true, silent = true })
@@ -13,12 +16,7 @@ vim.keymap.set('n', 'N', 'Nzzzv', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>bn', '<Cmd>enew<CR>')
 vim.keymap.set('n', '<leader>bd', '<Cmd>bdelete<CR>')
 
--- enable block cursor in insert mode
-vim.o.guicursor = ''
-
--- enable hash key on mac
-vim.api.nvim_set_keymap('i', '<A-3>', '#', { noremap = true })
-
+-- deugb info for keymap, press f12 then key to see info
 vim.keymap.set('n', '<F12>', function()
   local char = vim.fn.getchar()
   local key = vim.fn.nr2char(char)
