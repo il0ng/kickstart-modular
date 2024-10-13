@@ -16,11 +16,4 @@ vim.keymap.set('n', 'N', 'Nzzzv', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>bn', '<Cmd>enew<CR>')
 vim.keymap.set('n', '<leader>bd', '<Cmd>bdelete<CR>')
 
--- deugb info for keymap, press f12 then key to see info
-vim.keymap.set('n', '<F12>', function()
-  local char = vim.fn.getchar()
-  local key = vim.fn.nr2char(char)
-  print(string.format('Decimal: %d, Hex: 0x%x, Char: %s', char, char, vim.inspect(key)))
-end, { noremap = true })
-
 return {}
