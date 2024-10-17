@@ -1,4 +1,4 @@
-vim.api.nvim_set_keymap('n', '<leader>q', ':lua ToggleQuickfix()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>q', ':lua ToggleQuickfix()<CR>', { noremap = true, silent = true, desc = 'Toggle quickfix list' })
 
 function ToggleQuickfix()
   local qf_exists = false

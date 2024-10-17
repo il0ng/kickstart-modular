@@ -5,15 +5,15 @@
 vim.api.nvim_set_keymap('i', '<A-3>', '#', { noremap = true })
 
 -- centre half page jumps
-vim.keymap.set('n', '<C-d>', '<C-d>zz', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-u>', '<C-u>zz', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { noremap = true, silent = true, desc = 'Jump down half page (cursor centred)' })
+vim.keymap.set('n', '<C-u>', '<C-u>zz', { noremap = true, silent = true, desc = 'Jump up half page (cursor centred)' })
 
 -- centre next and previous jumps
-vim.keymap.set('n', 'n', 'nzzzv', { noremap = true, silent = true })
-vim.keymap.set('n', 'N', 'Nzzzv', { noremap = true, silent = true })
+vim.keymap.set('n', 'n', 'nzzzv', { noremap = true, silent = true, desc = 'Next jump (cursor centred)' })
+vim.keymap.set('n', 'N', 'Nzzzv', { noremap = true, silent = true, desc = 'Previous jump (cursor centred)' })
 
 -- buffer operations
-vim.keymap.set('n', '<leader>bn', '<Cmd>enew<CR>')
-vim.keymap.set('n', '<leader>bd', '<Cmd>bdelete<CR>')
+vim.keymap.set('n', '<leader>bn', '<Cmd>enew<CR>', { desc = 'New buffer' })
+vim.keymap.set('n', '<leader>bd', '<Cmd>bdelete<CR>', { desc = 'Delete buffer' })
 
 return {}
