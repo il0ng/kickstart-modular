@@ -20,7 +20,7 @@ return {
         harpoon.ui:toggle_quick_menu(harpoon:list(), {
           title = ' Harpoon deez nutz ',
         })
-      end, { desc = 'Toggle Harpoon quick menu' })
+      end, { desc = 'Toggle Harpoon deez nutz' })
 
       -- Basic keymaps
       vim.keymap.set('n', '<leader>a', function()
