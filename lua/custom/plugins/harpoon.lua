@@ -14,13 +14,15 @@ return {
           -- return vim.loop.cwd()
           -- end,
         },
+        ui = {
+          title = 'My Custom Harpoon Title',
+        },
       }
 
-      -- TODO: Configure Harpoon UI - native dialogue title etc
-
-      -- Keymap to open Harpoon menu
       vim.keymap.set('n', '<leader>p', function()
-        harpoon.ui:toggle_quick_menu(harpoon:list())
+        harpoon.ui:toggle_quick_menu(harpoon:list(), {
+          title = ' Harpoon deez nutz ',
+        })
       end, { desc = 'Toggle Harpoon quick menu' })
 
       -- Basic keymaps
