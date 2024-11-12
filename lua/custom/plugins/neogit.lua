@@ -18,7 +18,7 @@ return {
         diffview = true,
         telescope = true,
       },
-      -- graph_style = 'kitty',
+      graph_style = 'kitty',
     }
   end,
 }
