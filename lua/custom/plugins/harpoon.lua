@@ -14,9 +14,6 @@ return {
           -- return vim.loop.cwd()
           -- end,
         },
-        ui = {
-          title = 'My Custom Harpoon Title',
-        },
       }
 
       vim.keymap.set('n', '<leader>p', function()
