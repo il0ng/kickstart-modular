@@ -197,6 +197,10 @@ return {
 
         -- Vue 3
         volar = {
+          filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' },
+          typescript = {
+            tsdk = vim.fn.expand '$HOME/node_modules/typescript/lib',
+          },
           init_options = {
             vue = {
               hybridMode = false,
