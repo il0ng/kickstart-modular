@@ -1,4 +1,6 @@
-vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+vim.keymap.set('n', '<Tab>', function()
+  vim.cmd((vim.bo.filetype == 'oil') and 'bd' or 'Oil')
+end)
 
 return {
   'stevearc/oil.nvim',
