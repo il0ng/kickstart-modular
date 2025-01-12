@@ -195,65 +195,49 @@ return {
           },
         },
 
-        -- Vue 3
         volar = {
-          filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' },
-          typescript = {
-            tsdk = vim.fn.expand '$HOME/node_modules/typescript/lib',
-          },
+          filetypes = { 'typescript', 'javascript', 'vue' },
           init_options = {
+            typescript = {
+              tsdk = vim.fn.expand '$HOME/node_modules/typescript/lib',
+            },
             vue = {
               hybridMode = false,
             },
           },
           settings = {
             typescript = {
-              inlayHints = {
-                enumMemberValues = {
-                  enabled = true,
-                },
-                functionLikeReturnTypes = {
-                  enabled = true,
-                },
-                propertyDeclarationTypes = {
-                  enabled = true,
-                },
-                parameterTypes = {
-                  enabled = true,
-                  suppressWhenArgumentMatchesName = true,
-                },
-                variableTypes = {
-                  enabled = true,
-                },
+              suggest = {
+                enabled = true,
+                paths = true,
+                autoImports = true,
+                completeFunctionCalls = true,
+                includeCompletionsForImportStatements = true,
+                includeCompletionsWithClassMemberSnippets = true,
+                includeAutomaticOptionalChainCompletions = true,
+                includeCompletionsForModuleExports = true,
+                includeCompletionsWithSnippetText = true,
+                includeCompletionsWithInsertText = true,
+                includePackageJsonAutoImports = 'auto',
+                includeCompletionsWithObjectLiteralMethodSnippets = true,
+                generateReturnInDocTemplate = true,
               },
             },
           },
-        },
-        -- TypeScript
-        ts_ls = {
-          init_options = {
-            plugins = {
-              {
-                name = '@vue/typescript-plugin',
-                location = vim.fn.stdpath 'data' .. '/mason/packages/vue-language-server/node_modules/@vue/language-server',
-                languages = { 'vue' },
+
+          ts_ls = {
+            filetypes = { 'typescript', 'javascript', 'vue' },
+            init_options = {
+              preferences = {
+                disableSuggestions = false,
+                includeCompletionsForModuleExports = true,
               },
-            },
-          },
-          settings = {
-            typescript = {
-              tsserver = {
-                useSyntaxServer = false,
-              },
-              inlayHints = {
-                includeInlayParameterNameHints = 'all',
-                includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-                includeInlayFunctionParameterTypeHints = true,
-                includeInlayVariableTypeHints = true,
-                includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-                includeInlayPropertyDeclarationTypeHints = true,
-                includeInlayFunctionLikeReturnTypeHints = true,
-                includeInlayEnumMemberValueHints = true,
+              plugins = {
+                {
+                  name = '@vue/typescript-plugin',
+                  location = vim.fn.stdpath 'data' .. '/mason/packages/vue-language-server/node_modules/@vue/language-server',
+                  languages = { 'vue' },
+                },
               },
             },
           },

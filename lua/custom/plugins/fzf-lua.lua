@@ -9,6 +9,7 @@ return {
     vim.keymap.set('n', '<leader>sk', ':FzfLua keymaps<CR>', { silent = true, desc = '[S]earch [K]eymaps' })
     vim.keymap.set('n', '<leader>st', ':FzfLua awesome_colorschemes<CR>', { silent = true, desc = '[S]earch [T]hemes' })
     vim.keymap.set('n', '<leader>so', ':FzfLua oldfiles<CR>', { silent = true, desc = '[S]earch [O]ld files' })
+    vim.keymap.set('n', '<leader>sd', ':FzfLua diagnostics_workspace<CR>', { silent = true, desc = '[D]iagnostics' })
     vim.keymap.set('n', '<leader>gr', ':FzfLua lsp_references<CR>', { silent = true, desc = '[S]earch LSP [R]eferences' })
     vim.keymap.set('n', '<leader><leader>', ':FzfLua buffers<CR>', { silent = true, desc = '[ ] Find existing buffers' })
     -- calling `setup` is optional for customization
