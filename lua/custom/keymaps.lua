@@ -14,6 +14,5 @@ vim.keymap.set('n', 'N', 'Nzzzv', { noremap = true, silent = true, desc = 'Previ
 
 -- buffer operations
 vim.keymap.set('n', '<leader>bn', '<Cmd>enew<CR>', { desc = 'New buffer' })
-vim.keymap.set('n', '<leader>bd', '<Cmd>bdelete<CR>', { desc = 'Delete buffer' })
 
 return {}
